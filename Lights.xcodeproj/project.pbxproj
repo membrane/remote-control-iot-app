@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1176948A71C145814E53F088 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6131FCFB7AA99B11071192 /* Pods.framework */; };
-		4318F73E1CD3AEA700537F3E /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 4318F73D1CD3AEA700537F3E /* LICENSE.md */; };
 		435AB1DE1CCE576200A79EF3 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435AB1DD1CCE576200A79EF3 /* Container.swift */; };
 		43B5CC011CB680800008767E /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5CC001CB680800008767E /* MQTTManager.swift */; };
 		43CAA60E1CB65DCD0043DFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CAA60D1CB65DCD0043DFE9 /* AppDelegate.swift */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		1E6131FCFB7AA99B11071192 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8E73872B901D1E1B0CF6DB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		4318F73D1CD3AEA700537F3E /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		435AB1DD1CCE576200A79EF3 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		43B5CC001CB680800008767E /* MQTTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
 		43CAA60A1CB65DCD0043DFE9 /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +88,6 @@
 				43CAA6141CB65DCD0043DFE9 /* Assets.xcassets */,
 				43CAA6161CB65DCD0043DFE9 /* LaunchScreen.storyboard */,
 				43CAA6191CB65DCD0043DFE9 /* Info.plist */,
-				4318F73D1CD3AEA700537F3E /* LICENSE.md */,
 			);
 			path = Lights;
 			sourceTree = "<group>";
@@ -164,7 +161,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4318F73E1CD3AEA700537F3E /* LICENSE.md in Resources */,
 				43CAA6181CB65DCD0043DFE9 /* LaunchScreen.storyboard in Resources */,
 				43CAA6151CB65DCD0043DFE9 /* Assets.xcassets in Resources */,
 				43CAA6131CB65DCD0043DFE9 /* Main.storyboard in Resources */,
