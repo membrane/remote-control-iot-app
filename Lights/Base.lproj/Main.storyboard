@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="thN-Q7-Et1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lights Remote-->
+        <scene sceneID="x0j-3g-wQU">
+            <objects>
+                <viewController id="2om-Tv-GXs" customClass="Container" customModule="Lights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="adK-yr-4nA"/>
+                        <viewControllerLayoutGuide type="bottom" id="mf2-kg-f1Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S0u-Tn-tbT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeV-Gj-2gp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <connections>
+                                    <segue destination="0Wh-Ta-KDh" kind="embed" id="Ov8-8k-aTp"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6n-yB-GGN">
+                                <rect key="frame" x="439" y="548" width="115" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="ohp-Qq-3Dd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="All lights OFF"/>
+                                <connections>
+                                    <action selector="lightsOff:" destination="2om-Tv-GXs" eventType="touchUpInside" id="muD-iB-2gd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x6n-yB-GGN" firstAttribute="leading" secondItem="IeV-Gj-2gp" secondAttribute="trailing" constant="-161" id="9XQ-DZ-omR"/>
+                            <constraint firstItem="IeV-Gj-2gp" firstAttribute="top" secondItem="S0u-Tn-tbT" secondAttribute="top" id="CVc-qO-gcC"/>
+                            <constraint firstItem="x6n-yB-GGN" firstAttribute="top" secondItem="IeV-Gj-2gp" secondAttribute="bottom" constant="-3" id="G40-wW-2b8"/>
+                            <constraint firstAttribute="trailing" secondItem="IeV-Gj-2gp" secondAttribute="trailing" id="ZwJ-Vu-9BC"/>
+                            <constraint firstItem="IeV-Gj-2gp" firstAttribute="leading" secondItem="S0u-Tn-tbT" secondAttribute="leading" id="jb1-Ue-xs4"/>
+                            <constraint firstItem="IeV-Gj-2gp" firstAttribute="bottom" secondItem="mf2-kg-f1Y" secondAttribute="top" id="xbK-si-f5w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lights Remote" id="0VO-LH-caR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xcp-o3-IN4">
+                            <connections>
+                                <action selector="addLabel:" destination="2om-Tv-GXs" id="4Y6-pZ-QZ0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Z2-nJ-VSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="219"/>
+        </scene>
+        <!--Lights Remote-->
+        <scene sceneID="nHX-iB-YoU">
+            <objects>
+                <viewController id="4Xf-SJ-fjK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1f1-sJ-gBe"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhi-Qp-uIy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x9v-35-0Me">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Host:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FS-yl-Omo">
+                                <rect key="frame" x="20" y="114" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Port:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-hQ-6zh">
+                                <rect key="frame" x="20" y="158" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5U-0I-7nS">
+                                <rect key="frame" x="20" y="296" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1y-D0-Awn">
+                                <rect key="frame" x="240" y="198" width="120" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Connect"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="yourhost.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfj-tn-bL7">
+                                <rect key="frame" x="86" y="110" width="460" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1883" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3q-ug-jqn">
+                                <rect key="frame" x="86" y="154" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disconnected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRI-mb-E5C">
+                                <rect key="frame" x="86" y="296" width="219" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lights Remote" id="CVe-rv-PdB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOl-DV-51q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="-490"/>
+        </scene>
+        <!--Lights Remote-->
+        <scene sceneID="KPv-ab-ZDV">
+            <objects>
+                <viewController id="4Dc-nH-CcR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ra4-EN-nPy"/>
+                        <viewControllerLayoutGuide type="bottom" id="b7a-wp-N9Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E2D-Ts-Zjw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VH8-dY-fG5">
+                                <rect key="frame" x="20" y="72" width="560" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="©2016 predic8 GmbH">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-CondensedBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">  Lights Remote represents a simple mobile MQTT client. MQTT protocol is widely used in different tasks of IoT. With this app you can switch on/off the lights that are connected to your phone and broker in the same network. If you have any comments or suggestions, please share them with us. We would appreciate to get your reviews!  To know more about MQTT protocol, visit official site </string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="mqtt.org">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <url key="NSLink" string="http://mqtt.org"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".   Lights Remote also includes:  Moscapsule: ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="https://github.com/flightonary/">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <url key="NSLink" string="https://github.com/flightonary/"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Moscapsule Mosquitto: ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://mosquitto.org">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <url key="NSLink" string="http://mosquitto.org"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Pixabay images: ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="https://pixabay.com">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <url key="NSLink" string="https://pixabay.com"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" PixelLove icons: ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://www.pixellove.com">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <url key="NSLink" string="http://www.pixellove.com"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b7a-wp-N9Z" firstAttribute="top" secondItem="VH8-dY-fG5" secondAttribute="bottom" constant="8" symbolic="YES" id="9AJ-jg-Vjf"/>
+                            <constraint firstItem="VH8-dY-fG5" firstAttribute="top" secondItem="Ra4-EN-nPy" secondAttribute="bottom" constant="8" symbolic="YES" id="jrk-so-iOK"/>
+                            <constraint firstItem="VH8-dY-fG5" firstAttribute="leading" secondItem="E2D-Ts-Zjw" secondAttribute="leadingMargin" id="rH4-2E-yds"/>
+                            <constraint firstItem="VH8-dY-fG5" firstAttribute="trailing" secondItem="E2D-Ts-Zjw" secondAttribute="trailingMargin" id="w96-ng-fdl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lights Remote" id="KmD-VH-GeF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3O-wk-DpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="973"/>
+        </scene>
+        <!--Bulb Controller-->
+        <scene sceneID="LhT-xy-abJ">
+            <objects>
+                <tableViewController id="0Wh-Ta-KDh" customClass="BulbController" customModule="Lights" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" id="nax-kj-ubq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bulbCell" id="pHd-QW-7gB" customClass="BulbCell" customModule="Lights" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pHd-QW-7gB" id="Vtz-37-ddz">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGa-mL-xCw">
+                                            <rect key="frame" x="20" y="20" width="150" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="OkL-kv-siT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="on" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-m5-m29">
+                                            <rect key="frame" x="554" y="8" width="38" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="38" id="aQc-6M-rdb"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bpL-m5-m29" firstAttribute="top" secondItem="Vtz-37-ddz" secondAttribute="top" constant="8" id="3rQ-cn-QnR"/>
+                                        <constraint firstItem="LGa-mL-xCw" firstAttribute="top" secondItem="Vtz-37-ddz" secondAttribute="topMargin" constant="12" id="D2M-8W-1Io"/>
+                                        <constraint firstItem="bpL-m5-m29" firstAttribute="trailing" secondItem="Vtz-37-ddz" secondAttribute="trailingMargin" id="RoI-dD-uFa"/>
+                                        <constraint firstItem="LGa-mL-xCw" firstAttribute="leading" secondItem="Vtz-37-ddz" secondAttribute="leadingMargin" constant="12" id="XaZ-90-z50"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bpL-m5-m29" secondAttribute="bottom" constant="-0.5" id="ZZb-m9-upW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="LGa-mL-xCw" id="8p6-ge-cv9"/>
+                                    <outlet property="pic" destination="bpL-m5-m29" id="Sa6-N5-fhQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0Wh-Ta-KDh" id="uvg-Zg-fHh"/>
+                            <outlet property="delegate" destination="0Wh-Ta-KDh" id="4Qp-km-Cge"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="duq-nb-Y1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426" y="218.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qj4-gn-YKL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="thN-Q7-Et1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Jfa-Kw-VtA">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OZh-dj-iUe" kind="relationship" relationship="viewControllers" id="heM-ei-j1K"/>
+                        <segue destination="iSR-V5-XwK" kind="relationship" relationship="viewControllers" id="xms-lK-yJp"/>
+                        <segue destination="68P-13-xLf" kind="relationship" relationship="viewControllers" id="iQt-Hk-jwp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIc-bD-PJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16" y="219"/>
+        </scene>
+        <!--Lights-->
+        <scene sceneID="ZW5-fH-lQF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iSR-V5-XwK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lights" image="bulb" id="jc5-Kz-zVF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tB3-rN-rVp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2om-Tv-GXs" kind="relationship" relationship="rootViewController" id="46r-N4-cA1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4CN-81-yEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="219"/>
+        </scene>
+        <!--Connect-->
+        <scene sceneID="rqg-4w-yDL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZh-dj-iUe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Connect" image="connect" id="jSh-WW-709"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yZy-hH-Tfv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Xf-SJ-fjK" kind="relationship" relationship="rootViewController" id="NV3-x5-bbX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCB-CL-CDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="-490"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="x9b-tj-p3c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="68P-13-xLf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="iiE-yM-I6r"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8X0-yb-MWe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Dc-nH-CcR" kind="relationship" relationship="rootViewController" id="5qZ-Ti-x1d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCK-i1-HzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="973"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bulb" width="32" height="32"/>
+        <image name="connect" width="32" height="32"/>
+        <image name="info" width="32" height="32"/>
+        <image name="on" width="297" height="480"/>
+    </resources>
+</document>
