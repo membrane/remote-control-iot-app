@@ -1,6 +1,5 @@
 # remote-control-iot-app
-Title: LightsRemote
-iOS app for controlling lights over cheap remotes.
+LightsRemote iOS app for controlling lights over cheap remotes.
 
 LightsRemote sends messages to broker to switch the lights on/off over the MQTT protocol. When broker
 publishes a message to LightsRemote, its interface is updated accordingly.
