@@ -13,7 +13,7 @@ class MQTTManager {
     
     static let sharedInstance = MQTTManager()
     // Static variable...
-    static private let brokerHost = "192.168.2.163"
+    static private let brokerHost = "192.168.2.206"
     static private let port: Int32 = 1883, keepAlive: Int32 = 60
     static private let clientId = "cid"
     static private var mqttClient: MQTTClient!
