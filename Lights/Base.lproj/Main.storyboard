@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="thN-Q7-Et1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="thN-Q7-Et1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--LightsRemote-->
+        <!--💡Remote-->
         <scene sceneID="x0j-3g-wQU">
             <objects>
                 <viewController id="2om-Tv-GXs" customClass="Container" customModule="Lights" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +46,7 @@
                             <constraint firstItem="IeV-Gj-2gp" firstAttribute="bottom" secondItem="mf2-kg-f1Y" secondAttribute="top" id="xbK-si-f5w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="LightsRemote" id="0VO-LH-caR">
+                    <navigationItem key="navigationItem" title="💡Remote" id="0VO-LH-caR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xcp-o3-IN4">
                             <connections>
                                 <action selector="addLabel:" destination="2om-Tv-GXs" id="4Y6-pZ-QZ0"/>
@@ -60,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="1602" y="219"/>
         </scene>
-        <!--LightsRemote-->
+        <!--💡Remote-->
         <scene sceneID="nHX-iB-YoU">
             <objects>
                 <viewController id="4Xf-SJ-fjK" sceneMemberID="viewController">
@@ -75,7 +73,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FS-yl-Omo">
                                 <rect key="frame" x="20" y="114" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="9ch-m4-jnA"/>
+                                    <constraint firstAttribute="width" constant="42" id="Pwg-Iy-TOi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,7 +94,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1y-D0-Awn">
                                 <rect key="frame" x="240" y="198" width="120" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="SHp-dy-tA7"/>
+                                    <constraint firstAttribute="height" constant="30" id="G2K-Pn-jYx"/>
+                                    <constraint firstAttribute="width" constant="120" id="c2S-ZN-sEG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Connect"/>
@@ -109,7 +108,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1883" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3q-ug-jqn">
                                 <rect key="frame" x="86" y="154" width="59" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="59" id="MZU-pO-hjR"/>
+                                    <constraint firstAttribute="width" constant="59" id="ULR-gF-dfb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -117,7 +116,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disconnected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRI-mb-E5C">
                                 <rect key="frame" x="86" y="296" width="219" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="219" id="Pyh-3w-bEq"/>
+                                    <constraint firstAttribute="width" constant="219" id="Tvr-8G-EbB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,34 +125,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gfj-tn-bL7" firstAttribute="leading" secondItem="W3q-ug-jqn" secondAttribute="leading" id="0Xx-WE-oXR"/>
-                            <constraint firstItem="nhi-Qp-uIy" firstAttribute="top" secondItem="O5U-0I-7nS" secondAttribute="bottom" constant="234" id="5yg-BX-f8j"/>
-                            <constraint firstItem="vRI-mb-E5C" firstAttribute="top" secondItem="B1y-D0-Awn" secondAttribute="bottom" constant="68" id="6I5-tD-Iuy"/>
-                            <constraint firstItem="W3q-ug-jqn" firstAttribute="leading" secondItem="vRI-mb-E5C" secondAttribute="leading" id="6cf-Wo-zb1"/>
-                            <constraint firstItem="vRI-mb-E5C" firstAttribute="leading" secondItem="O5U-0I-7nS" secondAttribute="trailing" constant="10" id="9Kw-UI-B3C"/>
-                            <constraint firstItem="1FS-yl-Omo" firstAttribute="centerY" secondItem="Gfj-tn-bL7" secondAttribute="centerY" id="Aum-NF-X4o"/>
-                            <constraint firstItem="1FS-yl-Omo" firstAttribute="trailing" secondItem="Ssc-hQ-6zh" secondAttribute="trailing" id="LED-QP-9v2"/>
-                            <constraint firstItem="Ssc-hQ-6zh" firstAttribute="leading" secondItem="O5U-0I-7nS" secondAttribute="leading" id="Q1F-yG-5n9"/>
-                            <constraint firstItem="Ssc-hQ-6zh" firstAttribute="top" secondItem="1FS-yl-Omo" secondAttribute="bottom" constant="23" id="Xdc-UK-Y7a"/>
-                            <constraint firstItem="W3q-ug-jqn" firstAttribute="top" secondItem="Gfj-tn-bL7" secondAttribute="bottom" constant="14" id="eQQ-PF-606"/>
-                            <constraint firstItem="Ssc-hQ-6zh" firstAttribute="centerY" secondItem="W3q-ug-jqn" secondAttribute="centerY" id="fmV-ga-zSX"/>
-                            <constraint firstItem="Gfj-tn-bL7" firstAttribute="top" secondItem="1f1-sJ-gBe" secondAttribute="bottom" constant="46" id="hGa-23-0jA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Gfj-tn-bL7" secondAttribute="trailing" constant="34" id="hUC-JR-Ats"/>
-                            <constraint firstItem="O5U-0I-7nS" firstAttribute="baseline" secondItem="vRI-mb-E5C" secondAttribute="firstBaseline" id="knV-J2-dX6"/>
-                            <constraint firstItem="B1y-D0-Awn" firstAttribute="top" secondItem="Gfj-tn-bL7" secondAttribute="bottom" constant="58" id="ktp-Qg-5Gh"/>
-                            <constraint firstItem="Gfj-tn-bL7" firstAttribute="leading" secondItem="1FS-yl-Omo" secondAttribute="trailing" constant="24" id="oTs-U2-af6"/>
-                            <constraint firstItem="1FS-yl-Omo" firstAttribute="leading" secondItem="Ssc-hQ-6zh" secondAttribute="leading" id="pZl-VB-UmC"/>
-                            <constraint firstItem="B1y-D0-Awn" firstAttribute="centerX" secondItem="x9v-35-0Me" secondAttribute="centerX" id="vnH-wc-CLb"/>
-                            <constraint firstItem="1FS-yl-Omo" firstAttribute="leading" secondItem="x9v-35-0Me" secondAttribute="leadingMargin" id="xUJ-OA-s9v"/>
+                            <constraint firstItem="W3q-ug-jqn" firstAttribute="leading" secondItem="Ssc-hQ-6zh" secondAttribute="trailing" constant="24" id="3Xp-Cu-EZb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gfj-tn-bL7" secondAttribute="trailing" constant="34" id="4ex-hT-4Wq"/>
+                            <constraint firstItem="Gfj-tn-bL7" firstAttribute="centerY" secondItem="1FS-yl-Omo" secondAttribute="centerY" id="8JJ-TQ-eR9"/>
+                            <constraint firstItem="1FS-yl-Omo" firstAttribute="trailing" secondItem="Ssc-hQ-6zh" secondAttribute="trailing" id="AfR-PU-eKD"/>
+                            <constraint firstItem="1FS-yl-Omo" firstAttribute="leading" secondItem="Ssc-hQ-6zh" secondAttribute="leading" id="I6x-iJ-RA4"/>
+                            <constraint firstItem="W3q-ug-jqn" firstAttribute="centerY" secondItem="Ssc-hQ-6zh" secondAttribute="centerY" id="MgA-mO-KuJ"/>
+                            <constraint firstItem="vRI-mb-E5C" firstAttribute="leading" secondItem="O5U-0I-7nS" secondAttribute="trailing" constant="10" id="V9z-bu-a8b"/>
+                            <constraint firstItem="vRI-mb-E5C" firstAttribute="top" secondItem="B1y-D0-Awn" secondAttribute="bottom" constant="68" id="XtW-nc-Sw7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="O5U-0I-7nS" secondAttribute="leading" id="fzW-ve-yVU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ssc-hQ-6zh" secondAttribute="leading" id="mz6-Zf-ckB"/>
+                            <constraint firstItem="W3q-ug-jqn" firstAttribute="leading" secondItem="Gfj-tn-bL7" secondAttribute="leading" id="nlJ-Qe-vNT"/>
+                            <constraint firstItem="vRI-mb-E5C" firstAttribute="baseline" secondItem="O5U-0I-7nS" secondAttribute="baseline" id="p7F-wJ-5oT"/>
+                            <constraint firstItem="O5U-0I-7nS" firstAttribute="top" secondItem="1f1-sJ-gBe" secondAttribute="bottom" constant="232" id="pDv-sT-9M9"/>
+                            <constraint firstItem="B1y-D0-Awn" firstAttribute="centerX" secondItem="x9v-35-0Me" secondAttribute="centerX" id="qls-32-vhv"/>
+                            <constraint firstItem="Gfj-tn-bL7" firstAttribute="top" secondItem="1f1-sJ-gBe" secondAttribute="bottom" constant="46" id="sxj-i5-gIA"/>
+                            <constraint firstItem="Ssc-hQ-6zh" firstAttribute="top" secondItem="1f1-sJ-gBe" secondAttribute="bottom" constant="94" id="us0-rh-nLj"/>
+                            <constraint firstItem="Gfj-tn-bL7" firstAttribute="leading" secondItem="vRI-mb-E5C" secondAttribute="leading" id="zFC-sZ-IXn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="LightsRemote" id="CVe-rv-PdB"/>
+                    <navigationItem key="navigationItem" title="💡Remote" id="CVe-rv-PdB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOl-DV-51q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1602" y="-490"/>
         </scene>
-        <!--LightsRemote-->
+        <!--💡Remote-->
         <scene sceneID="KPv-ab-ZDV">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="4Dc-nH-CcR" sceneMemberID="viewController">
@@ -172,59 +169,71 @@
                                     <fragment content="©2016 predic8 GmbH">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-CondensedBold"/>
+                                            <font key="NSFont" size="16" name="Arial-BoldMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="  ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="LightsRemote">
+                                    <fragment content="💡">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="NSColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="AppleColorEmoji"/>
+                                            <font key="NSOriginalFont" size="14" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Remote">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="14" name="Arial-BoldMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" is a simple mobile client that communicates over MQTT. With this app you can ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="control lights">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="NSColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="14" name="Arial-BoldMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" in the same network with your iPhone and broker. If you have any comments or suggestions, please share ;)  ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="MQTT protocol">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="NSColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="14" name="Arial-BoldMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" is widely used in IoT. To know more about it, visit official site ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -232,7 +241,7 @@
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <url key="NSLink" string="http://mqtt.org"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -241,35 +250,36 @@
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="   ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Frameworks and images used:">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-CondensedBold"/>
+                                            <font key="NSFont" size="14" name="Arial-ItalicMT"/>
+                                            <font key="NSOriginalFont" size="14" name="Arial-ItalicMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" Moscapsule: ">
+                                    <fragment content="  Moscapsule: ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="https://github.com/flightonary/">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <url key="NSLink" string="https://github.com/flightonary/"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -277,14 +287,14 @@
                                     <fragment content="Moscapsule Mosquitto: ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://mosquitto.org">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <url key="NSLink" string="http://mosquitto.org"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -292,14 +302,14 @@
                                     <fragment content=" Pixabay images: ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="https://pixabay.com">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <url key="NSLink" string="https://pixabay.com"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -307,14 +317,14 @@
                                     <fragment content=" PixelLove icons: ">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://www.pixellove.com">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <url key="NSLink" string="http://www.pixellove.com"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -332,7 +342,7 @@
                             <constraint firstItem="b7a-wp-N9Z" firstAttribute="top" secondItem="VH8-dY-fG5" secondAttribute="bottom" constant="8" symbolic="YES" id="lCV-UC-KxD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="LightsRemote" id="KmD-VH-GeF"/>
+                    <navigationItem key="navigationItem" title="💡Remote" id="KmD-VH-GeF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3O-wk-DpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,9 +414,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OZh-dj-iUe" kind="relationship" relationship="viewControllers" id="heM-ei-j1K"/>
-                        <segue destination="iSR-V5-XwK" kind="relationship" relationship="viewControllers" id="xms-lK-yJp"/>
-                        <segue destination="68P-13-xLf" kind="relationship" relationship="viewControllers" id="iQt-Hk-jwp"/>
+                        <segue destination="OZh-dj-iUe" kind="relationship" relationship="viewControllers" id="T8o-Xi-ygi"/>
+                        <segue destination="iSR-V5-XwK" kind="relationship" relationship="viewControllers" id="Xr2-Ei-qnd"/>
+                        <segue destination="68P-13-xLf" kind="relationship" relationship="viewControllers" id="OtS-mU-jMc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIc-bD-PJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
