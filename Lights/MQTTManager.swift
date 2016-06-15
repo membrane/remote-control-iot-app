@@ -22,25 +22,36 @@ class MQTTManager {
     
     static func setMQTTClient() {
         let mqttConfig = MQTTConfig(clientId: clientId, host: brokerHost, port: port, keepAlive: keepAlive)
+        
+        mqttConfig.onConnectCallback = { returnCode in
+            if returnCode.rawValue == 0 {
+                postConnectResult(returnCode.description)
+            }
+        }
+        
         mqttConfig.onMessageCallback = { mqttMessage in
             if mqttMessage.topic == "lights/all" {
-                postToEveryone(mqttMessage.payloadString!)
+                postToEveryBulb(mqttMessage.payloadString!)
                 return
             }
-            postNotification(topic: mqttMessage.topic, payload: mqttMessage.payloadString!)
+            postMessage(topic: mqttMessage.topic, payload: mqttMessage.payloadString!)
         }
         mqttClient = MQTT.newConnection(mqttConfig)
     }
     
-    static func postNotification(topic topic: String, payload: String) {
+    static func postConnectResult(result: String) {
+        NSNotificationCenter.defaultCenter().postNotificationName("connectResult", object: sharedInstance, userInfo: ["result": result])
+    }
+    
+    static func postMessage(topic topic: String, payload: String) {
         NSNotificationCenter.defaultCenter().postNotificationName("reloadRow", object: sharedInstance, userInfo:
             ["ind": BulbManager.bulbs.indexOf({$0.topic == topic})!,
             "msg": payload == "on" ? true : false ])
     }
     
-    static func postToEveryone(payload: String) {
+    static func postToEveryBulb(payload: String) {
         for bulb in BulbManager.bulbs {
-            postNotification(topic: bulb.topic, payload: payload)
+            postMessage(topic: bulb.topic, payload: payload)
         }
     }
     

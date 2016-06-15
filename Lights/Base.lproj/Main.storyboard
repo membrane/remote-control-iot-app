@@ -61,7 +61,7 @@
         <!--💡Remote-->
         <scene sceneID="nHX-iB-YoU">
             <objects>
-                <viewController id="4Xf-SJ-fjK" sceneMemberID="viewController">
+                <viewController id="4Xf-SJ-fjK" customClass="ConnectController" customModule="Lights" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1f1-sJ-gBe"/>
                         <viewControllerLayoutGuide type="bottom" id="nhi-Qp-uIy"/>
@@ -99,6 +99,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="connectToBroker:" destination="4Xf-SJ-fjK" eventType="touchUpInside" id="VQD-fi-IHb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="yourhost.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfj-tn-bL7">
                                 <rect key="frame" x="86" y="110" width="460" height="30"/>

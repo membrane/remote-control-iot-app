@@ -23,11 +23,11 @@ class Container: UIViewController {
     }
 
     @IBAction func addLabel(sender: AnyObject) {
-        let alert = UIAlertController(title: "Add new Label", message: "Bitte Daten eingeben", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Fertig", style: .Default, handler: { action in
+        let alert = UIAlertController(title: "Add new Label", message: "Please enter data", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Done", style: .Default, handler: { action in
             self.insertLabel(label: alert.textFields![0].text!, topic: alert.textFields![1].text!)
         }))
-        alert.addAction(UIAlertAction(title: "Abbrechen", style: .Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         alert.addTextFieldWithConfigurationHandler({ labelTF in self.modifyTextField(textField: labelTF, placeholder: "Label", text: "") })
         alert.addTextFieldWithConfigurationHandler({ topicTF in self.modifyTextField(textField: topicTF, placeholder: "Topic", text: "lights/") })
         self.presentViewController(alert, animated: true, completion: nil)

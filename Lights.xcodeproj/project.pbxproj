@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1176948A71C145814E53F088 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6131FCFB7AA99B11071192 /* Pods.framework */; };
+		4330421E1D11AAAB000A402E /* ConnectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4330421D1D11AAAB000A402E /* ConnectController.swift */; };
 		435AB1DE1CCE576200A79EF3 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435AB1DD1CCE576200A79EF3 /* Container.swift */; };
 		43B5CC011CB680800008767E /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5CC001CB680800008767E /* MQTTManager.swift */; };
 		43CAA60E1CB65DCD0043DFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CAA60D1CB65DCD0043DFE9 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		1E6131FCFB7AA99B11071192 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8E73872B901D1E1B0CF6DB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4330421D1D11AAAB000A402E /* ConnectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectController.swift; sourceTree = "<group>"; };
 		435AB1DD1CCE576200A79EF3 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		43B5CC001CB680800008767E /* MQTTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
 		43CAA60A1CB65DCD0043DFE9 /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4330421F1D11AAD6000A402E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43FBF3841CB66D6D006BE6AE /* BulbManager.swift */,
+				43B5CC001CB680800008767E /* MQTTManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		433042201D11AAED000A402E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43CAA6111CB65DCD0043DFE9 /* Main.storyboard */,
+				43CAA6161CB65DCD0043DFE9 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		433042211D11AB0D000A402E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				435AB1DD1CCE576200A79EF3 /* Container.swift */,
+				43CAA61F1CB65F320043DFE9 /* BulbController.swift */,
+				4330421D1D11AAAB000A402E /* ConnectController.swift */,
+				43CAA6211CB661A70043DFE9 /* BulbCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		43CAA6011CB65DCD0043DFE9 = {
 			isa = PBXGroup;
 			children = (
@@ -79,14 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				43CAA60D1CB65DCD0043DFE9 /* AppDelegate.swift */,
-				43CAA6111CB65DCD0043DFE9 /* Main.storyboard */,
-				435AB1DD1CCE576200A79EF3 /* Container.swift */,
-				43FBF3841CB66D6D006BE6AE /* BulbManager.swift */,
-				43B5CC001CB680800008767E /* MQTTManager.swift */,
-				43CAA61F1CB65F320043DFE9 /* BulbController.swift */,
-				43CAA6211CB661A70043DFE9 /* BulbCell.swift */,
+				4330421F1D11AAD6000A402E /* Model */,
+				433042201D11AAED000A402E /* View */,
+				433042211D11AB0D000A402E /* Controller */,
 				43CAA6141CB65DCD0043DFE9 /* Assets.xcassets */,
-				43CAA6161CB65DCD0043DFE9 /* LaunchScreen.storyboard */,
 				43CAA6191CB65DCD0043DFE9 /* Info.plist */,
 			);
 			path = Lights;
@@ -226,6 +253,7 @@
 				435AB1DE1CCE576200A79EF3 /* Container.swift in Sources */,
 				43CAA60E1CB65DCD0043DFE9 /* AppDelegate.swift in Sources */,
 				43CAA6221CB661A70043DFE9 /* BulbCell.swift in Sources */,
+				4330421E1D11AAAB000A402E /* ConnectController.swift in Sources */,
 				43CAA6201CB65F320043DFE9 /* BulbController.swift in Sources */,
 				43B5CC011CB680800008767E /* MQTTManager.swift in Sources */,
 			);

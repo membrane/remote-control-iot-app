@@ -20,8 +20,8 @@ class BulbManager {
     }
     
     static func initDefaults() {
-        createBulb(label: "Küche", topic: MQTTManager.topic + "kitchen", on: false)
-        createBulb(label: "Tobias Zimmer", topic: MQTTManager.topic + "tobias", on: false)
+        createBulb(label: "Kitchen", topic: MQTTManager.topic + "kitchen", on: false)
+        createBulb(label: "Room One", topic: MQTTManager.topic + "room1", on: false)
     }
     
     static func saveDefaults() {
