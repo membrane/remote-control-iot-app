@@ -14,9 +14,7 @@ class BulbController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        MQTTManager.setMQTTClient()
         BulbManager.loadDefaults()
-        MQTTManager.subscribe(MQTTManager.topic + "#")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadRow), name: "reloadRow", object: MQTTManager.sharedInstance)
     }
 
@@ -25,13 +23,13 @@ class BulbController: UITableViewController {
     }
     
     func reloadRow(notification: NSNotification) {
-        dispatch_async(dispatch_get_main_queue(), {
+        dispatch_async(dispatch_get_main_queue()) {
             let bulbInd = notification.userInfo?["ind"] as! Int
             if BulbManager.bulbs[bulbInd].on != notification.userInfo?["msg"] as! Bool {
                 BulbManager.changeBulbStatus(withIndex: bulbInd)
                 self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: bulbInd, inSection: 0)], withRowAnimation: .Automatic)
             }
-        })
+        }
     }
     
 

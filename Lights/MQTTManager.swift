@@ -12,21 +12,21 @@ import Moscapsule
 class MQTTManager {
     
     static let sharedInstance = MQTTManager()
-    // Static variable...
-    static private let brokerHost = "192.168.2.206"
-    static private let port: Int32 = 1883, keepAlive: Int32 = 60
+    static private let keepAlive: Int32 = 60
     static private let clientId = "cid"
     static private var mqttClient: MQTTClient!
     
     static let topic = "lights/"
     
-    static func setMQTTClient() {
-        let mqttConfig = MQTTConfig(clientId: clientId, host: brokerHost, port: port, keepAlive: keepAlive)
+    static func setMQTTClient(brokerHost host: String, port: Int32) {
+        let mqttConfig = MQTTConfig(clientId: clientId, host: host, port: port, keepAlive: keepAlive)
         
         mqttConfig.onConnectCallback = { returnCode in
-            if returnCode.rawValue == 0 {
-                postConnectResult(returnCode.description)
-            }
+            postConnectResult(returnCode.description)
+        }
+        
+        mqttConfig.onDisconnectCallback = { reasonCode in
+            postConnectResult(reasonCode.description)
         }
         
         mqttConfig.onMessageCallback = { mqttMessage in
@@ -56,7 +56,9 @@ class MQTTManager {
     }
     
     static func publish(message msg: String, topic: String) {
-        mqttClient.publishString(msg, topic: topic, qos: 0, retain: false)
+        if mqttClient != nil && mqttClient.isConnected {
+            mqttClient.publishString(msg, topic: topic, qos: 0, retain: false)
+        }
     }
     
     static func subscribe(topic: String) {
@@ -65,5 +67,9 @@ class MQTTManager {
     
     static func unsubscribe(topic: String) {
         mqttClient.unsubscribe(topic)
+    }
+    
+    static func disconnect() {
+        mqttClient.disconnect()
     }
 }
